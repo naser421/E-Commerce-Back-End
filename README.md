@@ -22,7 +22,7 @@
 - [License:](#License)
 
 ### Deployment URL:
-This is being a backend application, most of the functionality is accessed in real time and as such has not been deployed yet.
+As a backend application, the majority of the functionality is accessed in real time, and as such, it has not yet been deployed.
 
 ### Repository URL:
 https://github.com/naser421/ORM-E-Commerce-App
