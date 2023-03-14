@@ -16,7 +16,7 @@ router.get('/', (req, res) => {
       }
     ]
   })
-  .then(productData => res.json(productData))
+  .then(productItems => res.json(productItems))
   .catch(err => {
     console.log(err);
     res.status(500).json(err);
@@ -42,12 +42,12 @@ router.get('/:id', (req, res) => {
       }
     ]
   })
-  .then(productData => {
-    if (!productData) {
+  .then(productItems => {
+    if (!productItems) {
         res.status(404).json({ message: 'This Product appears not to be linked to any id!' });
       return;
     }
-    res.json(productData);
+    res.json(productItems);
   })
   .catch(err => {
     console.log(err);
@@ -128,12 +128,12 @@ router.delete('/:id', (req, res) => {
       id: req.params.id
     }
   })
-  .then(productData => {
-    if (!productData) {
-      res.status(404).json({ message: 'No Product found with this id' });
+  .then(productItems => {
+    if (!productItems) {
+        res.status(404).json({ message: 'This Product appears not to be linked to any id!' });
       return;
     }
-    res.json(productData);
+    res.json(productItems);
   })
   .catch(err => {
     console.log(err);
