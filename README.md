@@ -70,7 +70,3 @@ https://github.com/naser421/ORM-E-Commerce-App
 - [MySQL2](https://www.npmjs.com/package/mysql2)
 - [Sequelize](https://www.npmjs.com/package/sequelize)
 - [Dotenv](https://www.npmjs.com/package/dotenv)
-
-
-## License:
-This project is licensed under the terms of the [MIT](https://opensource.org/licenses/MIT) license. 
