@@ -17,13 +17,12 @@
 - [Screenshot:](#Screenshot)
 - [Walkthrough Video:](#Walkthrough-Video)
 - [Technologies Used:](#Technologies-Used)
-- [License:](#License)
 
 ### Deployment URL:
 As a backend application, the majority of the functionality is accessed in real time, and as such, it has not yet been deployed.
 
 ### Repository URL:
-https://github.com/naser421/ORM-E-Commerce-App
+https://github.com/naser421/E-Commerce-Back-End
 
 ## Features:
 - Robust back-end.
