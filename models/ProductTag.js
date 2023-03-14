@@ -14,7 +14,7 @@ ProductTag.init(
     },
     product_id: {
       type: DataTypes.INTEGER,
-      references: {// FK product model on id
+      references: {
         model: 'product',
         key: 'id'
       }
