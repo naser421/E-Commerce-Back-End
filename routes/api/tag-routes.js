@@ -1,11 +1,9 @@
 const router = require('express').Router();
-//const { Model } = require('sequelize/types');
+
 const { Tag, Product, ProductTag } = require('../../models');
 
-// The `/api/tags` endpoint
-
 router.get('/', (req, res) => {
-  // find all tags with associated Product data
+  
   Tag.findAll({
     include: [
       {
@@ -15,7 +13,7 @@ router.get('/', (req, res) => {
       }
     ]
   })
-  .then(TagData => res.json(TagData))
+  .then(ItemData => res.json(ItemData))
   .catch(err => {
     console.log(err);
     res.status(500).json(err);
@@ -23,7 +21,7 @@ router.get('/', (req, res) => {
 });
 
 router.get('/:id', (req, res) => {
-  // find a single tag by its `id` with associated Product data
+ 
   Tag.findOne({
     where: {
       id: req.params.id
@@ -36,12 +34,12 @@ router.get('/:id', (req, res) => {
       }
     ]
   })
-  .then(TagData => {
-    if (!TagData) {
-      res.status(404).json({ message: 'No Tag found with this id' });
+  .then(ItemData => {
+    if (!ItemData) {
+        res.status(404).json({ message: 'This Tag appears not to be linked to any id!' });
       return;
     }
-    res.json(TagData);
+    res.json(ItemData);
   })
   .catch(err => {
     console.log(err);
@@ -50,11 +48,11 @@ router.get('/:id', (req, res) => {
 });
 
 router.post('/', (req, res) => {
-  // create a new tag
+ 
   Tag.create({
     tag_name: req.body.tag_name
   })
-  .then(TagData => res.json(TagData))
+  .then(ItemData => res.json(ItemData))
   .catch(err => {
     console.log(err);
     res.status(500).json(err);
@@ -62,7 +60,7 @@ router.post('/', (req, res) => {
 });
 
 router.put('/:id', (req, res) => {
-  // update a tag's name by its `id` value
+  
   Tag.update(
     {
       tag_name: req.body.tag_name
@@ -73,12 +71,12 @@ router.put('/:id', (req, res) => {
       }
     }
   )
-  .then(TagData => {
-    if (!TagData) {
-        res.status(404).json({ message: 'No Tag found with this id' });
+  .then(ItemData => {
+    if (!ItemData) {
+        res.status(404).json({ message: 'This Tag appears not to be linked to any id!' });
         return;
     }
-    res.json(TagData);
+    res.json(ItemData);
   })
   .catch(err => {
     console.log(err);
@@ -87,18 +85,18 @@ router.put('/:id', (req, res) => {
 });
 
 router.delete('/:id', (req, res) => {
-  // delete on tag by its `id` value
+  
   Tag.destroy({
     where: {
       id: req.params.id
     }
   })
-  .then(TagData => {
-    if (!TagData) {
-        res.status(404).json({ message: 'No Tag found with this id' });
+  .then(ItemData => {
+    if (!ItemData) {
+        res.status(404).json({ message: 'This Tag appears not to be linked to any id!' });
         return;
     }
-    res.json(TagData);
+    res.json(ItemData);
     })
     .catch(err => {
     console.log(err);
