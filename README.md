@@ -4,8 +4,6 @@
 ![HTML](https://img.shields.io/badge/-NODE-orange) ![JS](https://img.shields.io/badge/-JS-yellow) ![Node](https://img.shields.io/badge/-MySQL2-darkgreen)
 ![JEST](https://img.shields.io/badge/-SQL-darkred) ![Sequelize](https://img.shields.io/badge/-Sequelize-blue) ![Dotenv](https://img.shields.io/badge/-Dotenv-purple)
 
-![Github licence](https://img.shields.io/badge/license-MIT-blue)
-
 ## Description:
 	E-Commerce_Back-End-App
 
