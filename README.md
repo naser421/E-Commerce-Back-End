@@ -12,7 +12,6 @@
 - [Repository URL:](#Repository-URL)
 - [Features:](#Features)
 - [Pre-Requisites:](#Pre-Requisites)
-- [Installation:](#Installation)
 - [Usage:](#Usage)
 - [Screenshot:](#Screenshot)
 - [Walkthrough Video:](#Walkthrough-Video)
@@ -31,21 +30,6 @@ https://github.com/naser421/E-Commerce-Back-End
 ## Pre-Requisites:
 - Install `node.js`.
 - Install `MySQL`
-
-## Installation:
-- Download or Clone this particular repository.
-- In the event that you opt to download the zipped version of this repository, then unzip it in your desired directory.
-- Go to the command line (that is if you are not there yet).
-- Navigate to your unzipped directory.
-- Run: `npm install`.
-- Create a `.env` in the root directory of the application.
-- Create the following three variables in the `.env` file:
-   - `DB_NAME=ecommerce_db`
-   - `DB_USER=`[your MySQL username]
-   - `DB_PW=`[your MySQL password]
-- Open `MySQL` Command terminal.
-- Run `source db/schema.sql` to create the database.
-- Optionally navigate back to the regular command-line and run: `npm run seeds` to seed the databse.
 
 ## Usage:
 - Run: `npm start`.
